@@ -22,6 +22,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>era-logs</finalName>
+		<finalName>eralogs</finalName>
 	</build>
 </project>
