@@ -27,14 +27,12 @@
 	<div class="container">
 		<div class="page-header">
 			<h2>ERA Web Logs</h2>
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<p>To view ERA logs, click on the button below and select a log file to view.</p>
-					<p>
-						<a class="btn btn-primary" href="logs" role="button">List all log files</a>
-					</p>
-				</div>
-			</div>
+		</div>
+		<div>
+			<p>To view ERA logs, click on the button below and select a log file to view.</p>
+			<p>
+				<a class="btn btn-primary" href="logs" role="button">List all log files</a>
+			</p>
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

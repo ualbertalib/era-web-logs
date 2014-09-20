@@ -3,8 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
-	<display-name>ERA Logs</display-name>
-	<description>ERA Web Logs Application</description>
+	<display-name>ERA Web Logs</display-name>
+	<description>ERA Web Logs provides access to log files form your browser.</description>
 	<servlet>
 		<servlet-name>defaultServlet</servlet-name>
 		<servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
@@ -15,6 +15,10 @@
 		<init-param>
 			<param-name>listings</param-name>
 			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>globalXsltFile</param-name>
+			<param-value>/var/www/sites/era/conf/eralogs_global.xsl</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
