@@ -10,7 +10,8 @@
                 <meta charset="utf-8"/>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <title>ERA Web Logs</title>
+                <title>ERA Web Logs: / <xsl:value-of select="translate(@directory, '/', '')"
+                    /></title>
 
                 <!-- Bootstrap -->
                 <!-- Latest compiled and minified CSS -->
@@ -24,6 +25,9 @@
                 <!-- Latest compiled and minified JavaScript -->
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
 
+                <!-- Custom styles for this template -->
+                <link href="./WEB-INF/css/sticky-footer.css" rel="stylesheet"/>
+
                 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
                 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
                 <!--[if lt IE 9]>
@@ -34,7 +38,18 @@
             <body>
                 <div class="container">
                     <div class="page-header">
-                        <h2>ERA Web Logs</h2>
+                        <h2>ERA Web Logs: / <xsl:value-of select="translate(@directory, '/', '')"
+                            /></h2>
+                    </div>
+                    <div>
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="/eralogs/">Home</a>
+                            </li>
+                            <li class="active">
+                                <xsl:value-of select="translate(@directory, '/', '')"/>
+                            </li>
+                        </ol>
                     </div>
                     <table class="table table-hover table-condensed">
                         <thead>
@@ -49,8 +64,12 @@
                         </tbody>
                     </table>
                     <xsl:apply-templates select="readme"/>
-                    <hr/>
-                    <p>ERA: Education and Research Archive</p>
+                    <div>
+                        <div class="container">
+                            <hr/>
+                            <p class="text-muted">ERA: Education and Research Archive</p>
+                        </div>
+                    </div>
                 </div>
             </body>
         </html>
@@ -62,8 +81,7 @@
     </xsl:template>
 
     <xsl:template match="readme">
-        <hr size="1"/>
-        <pre><xsl:apply-templates/></pre>
+        <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="entry">

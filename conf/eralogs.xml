@@ -1,0 +1,3 @@
+<Context path="eralogs" docBase="${catalina.home}/server/webapps/eralogs.war" allowLinking="true" reloadable="true" crossContext="true">
+</Context>
+

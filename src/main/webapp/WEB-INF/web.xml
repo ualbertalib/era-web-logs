@@ -20,6 +20,10 @@
 			<param-name>globalXsltFile</param-name>
 			<param-value>/var/www/sites/era/conf/eralogs_global.xsl</param-value>
 		</init-param>
+		<init-param>
+			<param-name>readmeFile</param-name>
+			<param-value>readme.html</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
