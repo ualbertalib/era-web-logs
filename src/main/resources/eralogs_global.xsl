@@ -63,13 +63,6 @@
                             <xsl:apply-templates select="entries"/>
                         </tbody>
                     </table>
-                    <xsl:apply-templates select="readme"/>
-                    <div>
-                        <div class="container">
-                            <hr/>
-                            <p class="text-muted">ERA: Education and Research Archive</p>
-                        </div>
-                    </div>
                 </div>
             </body>
         </html>
@@ -81,7 +74,7 @@
     </xsl:template>
 
     <xsl:template match="readme">
-        <xsl:apply-templates/>
+        <xsl:copy-of select="document('readme.xhtml')/*"/>
     </xsl:template>
 
     <xsl:template match="entry">
