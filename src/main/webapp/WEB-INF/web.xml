@@ -18,7 +18,7 @@
 		</init-param>
 		<init-param>
 			<param-name>globalXsltFile</param-name>
-			<param-value>/var/www/sites/era/conf/eralogs_global.xsl</param-value>
+			<param-value>/export/digital/era/conf/eralogs_global.xsl</param-value>
 		</init-param>
 		<init-param>
 			<param-name>readmeFile</param-name>
